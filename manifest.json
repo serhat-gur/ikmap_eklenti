@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "IKMAP",
+  "version": "1.2.3",
+  "description": "IKMAP projesi için özel olarak yapılmıştır.",
+  "author":"Dveb Yazılım Çözümleri A.Ş.",
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://ebildirge.sgk.gov.tr/EBildirgeV2/*",
+    "https://developer.ikmap.com.tr/api/v1/*",
+    "https://test.ikmap.com.tr/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup/pop-up.html",
+    "default_title": "Formu Doldur",
+    "default_icon": {
+      "16": "images/Group.png",
+      "48": "images/Group.png",
+      "128": "images/Group.png"
+    }
+  },
+  "content_security_policy": {
+    "script-src": ["'self'", "https://cdn.jsdelivr.net"]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://ebildirge.sgk.gov.tr/*",
+        "https://uyg.sgk.gov.tr/*",
+        "https://test.ikmap.com.tr/*"
+
+      ],
+      "js": ["content.js"]
+    }
+  ]
+}

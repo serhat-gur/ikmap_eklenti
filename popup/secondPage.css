@@ -1,0 +1,67 @@
+/* Genel sayfa stilini ayarlıyoruz */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 24px;
+    border-radius: 8px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 11px 23px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 9px;
+    transition: background-color 0.3s ease;
+}
+
+.photo-container {
+    display: flex;
+    justify-content: center; /* Yatay ortalama */
+    align-items: center;    /* Dikey ortalama */
+    height: 200px;          /* Kapsayıcı yüksekliği */
+    width: 100%;            /* Kapsayıcı genişliği */
+    border: 1px solid #ccc; /* Görünürlük için çerçeve (isteğe bağlı) */
+}
+
+#photoId {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Yuvarlak çerçeve */
+    display: block;     /* Varsayılan olarak blok düzeyi eleman */
+}
+
+
+
+.btn:hover {
+    background-color: #45a049;
+}

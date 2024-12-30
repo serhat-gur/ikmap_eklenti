@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Yap</title>
+    <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="secondPage.css">
+</head>
+<body>
+    <!-- Giriş Sayfası -->
+    <div id="loginPage" class="login-container">
+        <img src="/images/Group.svg" alt="Logo" class="logo">
+        <h2>Giriş Yap</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">E-posta:</label>
+                <input type="email" id="email" name="email" value="" placeholder="E-posta adresinizi girin" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Şifre:</label>
+                <input type="password" id="password" name="password" value="" placeholder="Şifrenizi girin" required>
+            </div>
+            <input type="submit" value="Giriş Yap">
+            <div class="error-message" id="error-message" style="display: none;">Geçersiz e-posta veya şifre.</div>
+        </form>
+    </div>
+
+    <!-- İkinci Sayfa (Second Page) -->
+    <div id="secondPage" class="container" style="display: none;">
+        <div>
+            <div>
+                <h1 id="username"></h1>
+            </div>
+            <div class="photo-container">
+
+            <img src="" id="photoId" alt="Profile Photo" style="width: 100px; height: 100px; border-radius: 50%; display: none;">
+            </div>
+            <p id="destek"></p>
+        </div>
+        <button id="logoutBtn" class="btn" style="display: none;">Çıkış Yap</button>
+    </div>
+    
+
+    <script src="popup.js"></script>
+</body>
+</html>
